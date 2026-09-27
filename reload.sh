@@ -15,7 +15,7 @@ fi
 
 # Step 2: Compile the kernel module
 echo "Compiling the kernel module..."
-make clean && make
+make clean && make module
 if [ $? -ne 0 ]; then
     echo "Compilation failed."
     exit 1
