@@ -150,7 +150,7 @@
 	 nice->cntRTT++;
  
 	 // added for Nice implementation: count numCong
-	 nice->maxRTT = min(nice->maxRTT, vrtt); 
+	 nice->maxRTT = max(nice->maxRTT, vrtt); 
 	 nice->thresholdRTT = ((SCALE - THRESHOLD) * nice->baseRTT + THRESHOLD * nice->maxRTT) / SCALE ;
 	 if (vrtt > nice->thresholdRTT) {
 		 nice->numCong += 1;
